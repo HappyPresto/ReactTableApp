@@ -1,0 +1,13 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.pagination__list {
+    display: flex;
+}
+.pagination__el {
+    text-decoration: underline;
+    padding: 2px;
+    margin-right: 5px;
+    cursor: pointer
+}

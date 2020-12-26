@@ -1,0 +1,22 @@
+.header {
+    background: #5FA2DD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.header__arrow {
+    padding: 5px;
+}
+.header__arrow-el {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    margin-right: 15px;
+    border-right-color: #fff;
+    border-left: 0;
+}
+.header__text {
+    padding: 15px;
+}

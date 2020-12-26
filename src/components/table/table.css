@@ -1,0 +1,29 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+.table th {
+    cursor: pointer;
+}
+.table tr {
+    height: 34px;
+    border-bottom: 1px solid #E9E9E9;
+}
+.table thead tr {
+    border-bottom: 2px solid #D0D0D0;
+}
+.table thead th {
+    border: 1px solid #D0D0D0;
+    font-weight: normal;
+}
+.table tr:nth-child(even) {
+    background: #F6F6F6;
+}
+.table tbody td:first-of-type {
+    border-right: 1px solid #E9E9E9;
+    text-align: right;
+}
+.table tbody td {
+    padding: 5px 5px 5px 10px;
+}
