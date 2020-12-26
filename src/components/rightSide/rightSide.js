@@ -15,6 +15,11 @@ const RightSide = (props) => {
     const [paginationCount, getPaginationCount] = useState(0);
 
     useEffect(() => {
+        getSortData();
+        setPagination();
+    }, [id]);
+
+    useEffect(() => {
         changeName(getCurrentName(id));
         getRes(getCurrentData(id, sort, pagination));
         getPaginationCount(getAllLength(id));
