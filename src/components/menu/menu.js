@@ -19,12 +19,12 @@ const CreateMenu = ({updateID}) => {
     }
 
     const parentMenu = [];
-    for (let item of menu) {
+    for (const [key, item] of Object.entries(menu)) {
         const children = [];
-        for (const [key, value] of Object.entries(item.children)) {
+        for (const [key2, value] of Object.entries(item.children)) {
             children.push(
                 <div 
-                    key={value.id}
+                    key={key2}
                     className={`menu__sublings-item${active == value.id ? " menu__sublings-active" : ""}`}
                     onClick={() => update(value.id)}
                 >{value.name}
@@ -32,9 +32,8 @@ const CreateMenu = ({updateID}) => {
             );
         } 
         parentMenu.push(
-            <div className="menu__item">
+            <div className="menu__item" key={key}>
                 <div 
-                    key={item.id}
                     className={`menu__name${open[item.id] ? " menu__name-active" : ""}`}
                     onClick={() => handleChange(item.id)}
                 >{item.name}</div>

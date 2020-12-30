@@ -19,7 +19,7 @@ export default class App extends Component {
     };
     
     render () {
-        const {id, sort} = this.state;
+        const {id} = this.state;
 
         return (
             <TableapiServiceProvider 
