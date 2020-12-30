@@ -7,7 +7,7 @@ const Header = ({text, showHidden}) => {
         <div className="header">
             <p className="header__text">{text}</p>
             {showHidden ? (
-                <a className='header__arrow' href='#'><span className='header__arrow-el'></span></a>
+                <p className='header__arrow'><span className='header__arrow-el'></span></p>
             ) : ""
             }
         </div>
