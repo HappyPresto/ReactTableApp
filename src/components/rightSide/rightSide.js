@@ -23,7 +23,7 @@ const RightSide = (props) => {
         changeName(getCurrentName(id));
         getRes(getCurrentData(id, sort, pagination));
         getPaginationCount(getAllLength(id));
-    }, [id, sort, pagination]);
+    }, [id, sort, pagination, getCurrentName, getCurrentData, getAllLength]);
 
     const forSort = (columnName) => {
         getSortData(columnName);

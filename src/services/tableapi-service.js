@@ -10,12 +10,12 @@ export default class TableapiService {
             return (a, b) => (a[field] < b[field]) ? -1 : (a[field] > b[field]) ? 1 : 0;
         }
         let curData;
-        for (const [key, value] of Object.entries(data)) {
+        for (const value of Object.values(data)) {
             if (value.id === id) {
                 curData = value.data.map(el => el);
             }
         }
-        if (sort != "default") {
+        if (sort !== "default") {
             curData.sort(byField(sort));
         }
         if (Array.isArray(curData)) {
@@ -27,7 +27,7 @@ export default class TableapiService {
         let name = "Exception";
         menu.forEach(el => {
             if (el.children.length > 0) {
-                for (const [key, value] of Object.entries(el.children)) {
+                for (const value of Object.values(el.children)) {
                     if (value.id === id) {
                         name = value.name;
                     }
@@ -37,7 +37,7 @@ export default class TableapiService {
         return name;
     };
     getAllLength = (id) => {
-        for (const [key, value] of Object.entries(data)) {
+        for (const value of Object.values(data)) {
             if (value.id === id) {
                 return Math.ceil(Object.keys(value.data).length / 10);
             }

@@ -25,7 +25,7 @@ const CreateMenu = ({updateID}) => {
             children.push(
                 <div 
                     key={key2}
-                    className={`menu__sublings-item${active == value.id ? " menu__sublings-active" : ""}`}
+                    className={`menu__sublings-item${active === value.id ? " menu__sublings-active" : ""}`}
                     onClick={() => update(value.id)}
                 >{value.name}
                 </div>
